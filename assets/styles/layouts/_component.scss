@@ -1,0 +1,148 @@
+header{
+    img{
+        @media screen and (max-width:670px) {
+            width: 56px;
+        }
+        padding-top: 80px;
+        object-fit: contain;
+        width: 90px;
+
+    }
+
+    h1{
+        @media screen and (max-width:670px) {
+            margin:32px 0 15px ;
+        }
+        margin:40px 0 16px ;
+    }
+
+    & > span{
+        @media screen and (max-width:670px) {
+            font-size: 0.75rem;
+            margin-bottom:32px;
+         }
+        @include fontStyle(1.25rem,300, auto, 0);
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    form{
+        @media screen and (max-width:670px) {
+            flex-direction: column;
+            gap:10px ;
+        }
+
+        display: flex;
+        max-width: 637px;
+        margin: 0 auto;
+        gap:16px ;
+        label{
+            position: relative;
+           input#email{
+            @media screen and (max-width:670px) {
+                width: 282px;
+                font-size: 0.75rem;
+            }
+            background: none;
+            border: 1px solid $color6;
+            width: 421px;
+            height: 56px;
+            @include fontStyle(1rem, 300, 20px,0);
+            &::placeholder{
+                color: $color6; 
+            }
+           }
+
+           span{
+            @media screen and (max-width:670px) {
+               position: relative;
+               margin-top: 10px;
+               margin-bottom: 20px;
+               bottom: 0;
+               left: 0;
+            }
+            display: none;
+            position: absolute;
+            color: $color7;
+            bottom: -30px;
+            left: 30px;
+           }
+           input#submit{
+            @media screen and (max-width:670px) {
+                width: 282px;
+                font-size: 0.75rem;
+            }
+            cursor: pointer;
+            background: $color2;
+            width: 200px;
+            height: 56px;
+            color: $white1;
+            box-shadow: 0 5px 10px 2px #4c7bf334;
+            @include fontStyle(1rem, 600,auto,0);
+           }
+        }
+
+        &.error{
+            input#email{
+                border: 1px solid $color7;
+            }
+            span{
+                display: block;
+            }
+        }
+    }
+}
+
+main{
+    margin:72px 0 120px;
+  
+    img{
+        @media screen and (max-width:670px) {
+            width: 320px;
+        }
+        object-fit: contain;
+        width: 640px;
+        // width: 100%;
+        // max-width: 1110px;
+    }
+}
+
+footer{
+    @media screen and (max-width:670px) {
+        width: 170px;
+    }
+    width: 204px;
+    margin: 0 auto;
+    ul{
+        @media screen and (max-width:670px) {
+            width: 120;
+        }
+        display: flex;
+        justify-content: space-between;
+        width: 120px;
+        margin: 0 auto 25px;
+        li{
+            
+            width: 31px;
+            height: 31px;
+            border: 1px solid $color2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            font-size: 0.95rem;
+            cursor: pointer;
+        &:hover{
+            background: $color2;
+            i{
+                color: $white1;
+            }
+           
+        }
+        }
+    }
+    p{
+        @include fontStyle(0.75rem, 300, auto,0);
+        color: $color3;
+    }
+}

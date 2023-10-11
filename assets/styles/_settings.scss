@@ -1,0 +1,72 @@
+/************** COLOR ******************/
+$color1:#15202A;
+$color2:#4C7BF3;
+$color3:#969696;
+$color4:#B8C7ED;
+$color6:#C2D3FF;
+$color7:#FF5466;
+$white1:#FFF;
+
+/************* FONT *******************/
+@font-face {
+    font-family: "libre franklin";
+    src: url(../fonts/LibreFranklin-VariableFont_wght.ttf);
+}
+
+$font1: libre franklin, sans-serif;
+
+/************ GENERAL PARAMETER ***********/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight, $letterSpacing){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+body{
+
+    font-size: 16px;
+    font-family: $font1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1{
+    @media screen and (max-width:670px) {
+       font-size: 1.375rem;
+       line-height: 32px;
+    }
+    @include fontStyle(3rem, 300, 60px,0);
+    color: $color3;
+    span{
+        font-weight:700;
+        color: $color1;
+    }
+}
+input{
+    border: none;
+    outline: none;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    @media screen and (max-width:670px) {
+        padding: 10px 32px;
+    }
+    border-radius: 28px;
+    padding: 18px 30px;
+}
